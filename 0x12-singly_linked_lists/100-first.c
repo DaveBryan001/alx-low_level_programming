@@ -1,9 +1,11 @@
 #include "lists.h"
 
 /**
- * pre_main_message - Prints a message before the main function is executed.
+ * pre_main_msg - Prints a message before the main function is executed.
  */
-void pre_main_message(void)
+
+void __attribute__ ((constructor)) pre_main_msg_()
 {
-    printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow");
+	printf(",\nI bore my house upon my back!\n");
 }
