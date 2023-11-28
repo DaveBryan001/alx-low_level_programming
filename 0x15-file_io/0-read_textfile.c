@@ -4,7 +4,8 @@
 #include <fcntl.h>
 
 /**
- * read_textfile - Reads a text file and prints it to the POSIX standard output.
+ * read_textfile - Reads a text file
+ * and prints it to the POSIX standard output.
  * @filename: The name of the file to be read.
  * @letters: The number of letters to read and print.
  *
@@ -28,7 +29,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
-		return(0);
+		return (0);
 
 	bytes_read = read(file_descriptor, buffer, letters);
 	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
